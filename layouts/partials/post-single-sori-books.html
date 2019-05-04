@@ -1,0 +1,953 @@
+<article class="post-full post"> 
+    <header class="post-full-header">
+        <section class="post-full-meta">
+            <time class="post-full-meta-date" datetime="{{.Date.Format "2006-01-02"}}">{{ .Date.Format "2 January 2006" | safeHTML }}</time>{{if .Params.tags }}
+                <span class="date-divider">/</span> {{ range $index, $tag := .Params.tags }}{{if lt $index 2}}<a href="{{$.Site.BaseURL}}tags/{{ $tag | urlize }}/">#{{$tag}}</a>&nbsp;{{end}}{{end}}{{ end }}
+        </section>
+        <h1 class="post-full-title">{{.Title}}</h1>
+    </header>
+    {{if .Params.image}}
+    <figure class="post-full-image" style="background-image: url({{.Params.image | absURL}})">
+    </figure>{{else}}
+    <figure class="post-full-image" style="background-image: url({{$.Site.BaseURL}}defimg/{{ index (seq 7 | shuffle) 0 }}.jpg)">
+    </figure>{{end}}
+
+    <section class="post-full-content">
+        <div class="kg-card-markdown">
+        {{ .Content }}    
+        </div>
+    </section>
+    <section class="widgets-sidebar">
+        <div>
+            <!-- Show static HTML/CSS as a placeholder in case js is not enabled - javascript include will override this if things work -->
+            <style type="text/css" media="screen">
+                .gr_custom_container_1556998562 {
+                    /* customize your Goodreads widget container here*/
+                    border: 1px solid gray;
+                    border-radius:10px;
+                    padding: 10px 5px 10px 5px;
+                    background-color: #FFFFFF;
+                    color: #000000;
+                    width: 300px
+                }
+                .gr_custom_header_1556998562 {
+                    /* customize your Goodreads header here*/
+                    border-bottom: 1px solid gray;
+                    width: 100%;
+                    margin-bottom: 5px;
+                    text-align: center;
+                    font-size: 120%
+                }
+                .gr_custom_each_container_1556998562 {
+                    /* customize each individual book container here */
+                    width: 100%;
+                    clear: both;
+                    margin-bottom: 10px;
+                    overflow: auto;
+                    padding-bottom: 4px;
+                    border-bottom: 1px solid #aaa;
+                }
+                .gr_custom_book_container_1556998562 {
+                    /* customize your book covers here */
+                    overflow: hidden;
+                    height: 60px;
+                    float: left;
+                    margin-right: 4px;
+                    width: 39px;
+                }
+                .gr_custom_author_1556998562 {
+                    /* customize your author names here */
+                    font-size: 10px;
+                }
+                .gr_custom_tags_1556998562 {
+                    /* customize your tags here */
+                    font-size: 10px;
+                    color: gray;
+                }
+                .gr_custom_rating_1556998562 {
+                    /* customize your rating stars here */
+                    float: right;
+                }
+            </style>
+
+            <div id="gr_custom_widget_1556998562">
+                <div class="gr_custom_container_1556998562">
+                    <h2 class="gr_custom_header_1556998562">
+                        <a style="text-decoration: none;" rel="nofollow" href="https://www.goodreads.com/review/list/5788613-matt?shelf=currently-reading&amp;utm_medium=api&amp;utm_source=custom_widget">Now reading</a>
+                    </h2>
+                    <div class="gr_custom_each_container_1556998562">
+                        <div class="gr_custom_book_container_1556998562">
+                            <a title="Make me German! Zweisprachiges Wendebuch Deutsch/ Englisch: Wie ich einmal loszog, ein perfekter Deutscher zu werden" rel="nofollow" href="https://www.goodreads.com/review/show/2805672774?utm_medium=api&amp;utm_source=custom_widget"><img alt="Make me German! Zweisprachiges Wendebuch Deutsch/ Englisch: Wie ich einmal loszog, ein perfekter Deutscher zu werden" border="0" src="https://images.gr-assets.com/books/1420713042s/24371502.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1556998562">
+                            <span class=" staticStars notranslate"><img src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1556998562">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/2805672774?utm_medium=api&amp;utm_source=custom_widget">Make me German! Zweisprachiges Wendebuch Deutsch/ Englisch: Wie ich einmal loszog, ein perfekter Deutscher zu werden</a>
+                        </div>
+                        <div class="gr_custom_author_1556998562">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/7241887.Adam_Fletcher">Adam  Fletcher</a>
+                        </div>
+                        <div class="gr_custom_tags_1556998562">
+                            tagged:
+                            currently-reading
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1556998562">
+                        <div class="gr_custom_book_container_1556998562">
+                            <a title="The Making of a Story: A Norton Guide to Writing Fiction and Nonfiction" rel="nofollow" href="https://www.goodreads.com/review/show/2697185315?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Making of a Story: A Norton Guide to Writing Fiction and Nonfiction" border="0" src="https://images.gr-assets.com/books/1442015879s/1679037.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1556998562">
+                            <span class=" staticStars notranslate"><img src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1556998562">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/2697185315?utm_medium=api&amp;utm_source=custom_widget">The Making of a Story: A Norton Guide to Writing Fiction and Nonfiction</a>
+                        </div>
+                        <div class="gr_custom_author_1556998562">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/774591.Alice_LaPlante">Alice LaPlante</a>
+                        </div>
+                        <div class="gr_custom_tags_1556998562">
+                            tagged:
+                            currently-reading
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1556998562">
+                        <div class="gr_custom_book_container_1556998562">
+                            <a title="Domain-Driven Design: Tackling Complexity in the Heart of Software" rel="nofollow" href="https://www.goodreads.com/review/show/2608708208?utm_medium=api&amp;utm_source=custom_widget"><img alt="Domain-Driven Design: Tackling Complexity in the Heart of Software" border="0" src="https://images.gr-assets.com/books/1385522513s/18994167.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1556998562">
+                            <span class=" staticStars notranslate"><img src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1556998562">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/2608708208?utm_medium=api&amp;utm_source=custom_widget">Domain-Driven Design: Tackling Complexity in the Heart of Software</a>
+                        </div>
+                        <div class="gr_custom_author_1556998562">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/104368.Eric_Evans">Eric Evans</a>
+                        </div>
+                        <div class="gr_custom_tags_1556998562">
+                            tagged:
+                            currently-reading
+                        </div>
+                    </div>
+                    <br style="clear: both"/>
+                    <center>
+                        <a rel="nofollow" href="https://www.goodreads.com/"><img alt="goodreads.com" style="border:0" src="https://www.goodreads.com/images/widget/widget_logo.gif" /></a>
+                    </center>
+                    <noscript>
+                        Share <a rel="nofollow" href="https://www.goodreads.com/">book reviews</a> and ratings with Matt, and even join a <a rel="nofollow" href="https://www.goodreads.com/group">book club</a> on Goodreads.
+                    </noscript>
+                </div>
+
+            </div>
+            <script src="https://www.goodreads.com/review/custom_widget/5788613.Now%20reading?cover_position=left&cover_size=small&num_books=5&order=d&shelf=currently-reading&show_author=1&show_cover=1&show_rating=1&show_review=0&show_tags=1&show_title=1&sort=date_started&widget_bg_color=FFFFFF&widget_bg_transparent=&widget_border_width=1&widget_id=1556998562&widget_text_color=000000&widget_title_size=medium&widget_width=medium" type="text/javascript" charset="utf-8"></script>
+        </div>
+        <div>
+            <!-- Show static HTML/CSS as a placeholder in case js is not enabled - javascript include will override this if things work -->
+            <style type="text/css" media="screen">
+                .gr_custom_container_1555620266 {
+                    /* customize your Goodreads widget container here*/
+                    border: 1px solid gray;
+                    border-radius:10px;
+                    padding: 10px 5px 10px 5px;
+                    background-color: #FFFFFF;
+                    color: #000000;
+                    width: 300px
+                }
+                .gr_custom_header_1555620266 {
+                    /* customize your Goodreads header here*/
+                    border-bottom: 1px solid gray;
+                    width: 100%;
+                    margin-bottom: 5px;
+                    text-align: center;
+                    font-size: 120%
+                }
+                .gr_custom_each_container_1555620266 {
+                    /* customize each individual book container here */
+                    width: 100%;
+                    clear: both;
+                    margin-bottom: 10px;
+                    overflow: auto;
+                    padding-bottom: 4px;
+                    border-bottom: 1px solid #aaa;
+                }
+                .gr_custom_book_container_1555620266 {
+                    /* customize your book covers here */
+                    overflow: hidden;
+                    height: 60px;
+                    float: left;
+                    margin-right: 4px;
+                    width: 39px;
+                }
+                .gr_custom_author_1555620266 {
+                    /* customize your author names here */
+                    font-size: 10px;
+                }
+                .gr_custom_tags_1555620266 {
+                    /* customize your tags here */
+                    font-size: 10px;
+                    color: gray;
+                }
+                .gr_custom_rating_1555620266 {
+                    /* customize your rating stars here */
+                    float: right;
+                }
+            </style>
+
+            <div id="gr_custom_widget_1555620266">
+                <div class="gr_custom_container_1555620266">
+                    <h2 class="gr_custom_header_1555620266">
+                        <a style="text-decoration: none;" rel="nofollow" href="https://www.goodreads.com/review/list/5788613-matt?shelf=read&amp;utm_medium=api&amp;utm_source=custom_widget">Finished reading</a>
+                    </h2>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="The Art of War: A New Translation" rel="nofollow" href="https://www.goodreads.com/review/show/2787022819?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Art of War: A New Translation" border="0" src="https://images.gr-assets.com/books/1394361303s/21141898.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="liked it"><img alt="liked it" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/2787022819?utm_medium=api&amp;utm_source=custom_widget">The Art of War: A New Translation</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/1771.Sun_Tzu">Sun Tzu</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win" rel="nofollow" href="https://www.goodreads.com/review/show/2780452612?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win" border="0" src="https://images.gr-assets.com/books/1516785582s/38191426.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/2780452612?utm_medium=api&amp;utm_source=custom_widget">The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/328437.Gene_Kim">Gene Kim</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Building Microservices" rel="nofollow" href="https://www.goodreads.com/review/show/2780435237?utm_medium=api&amp;utm_source=custom_widget"><img alt="Building Microservices" border="0" src="https://images.gr-assets.com/books/1439972456s/24836465.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/2780435237?utm_medium=api&amp;utm_source=custom_widget">Building Microservices</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/3362774.Sam_Newman">Sam Newman</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Proteus" rel="nofollow" href="https://www.goodreads.com/review/show/2780439540?utm_medium=api&amp;utm_source=custom_widget"><img alt="Proteus" border="0" src="https://images.gr-assets.com/books/1389251720s/20497213.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/2780439540?utm_medium=api&amp;utm_source=custom_widget">Proteus</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/283304.Deon_Meyer">Deon Meyer</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Revenant Gun (Machineries of Empire #3)" rel="nofollow" href="https://www.goodreads.com/review/show/2738269489?utm_medium=api&amp;utm_source=custom_widget"><img alt="Revenant Gun" border="0" src="https://images.gr-assets.com/books/1521413768s/39317617.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/2738269489?utm_medium=api&amp;utm_source=custom_widget">Revenant Gun</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/3001246.Yoon_Ha_Lee">Yoon Ha Lee</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Raven Stratagem (The Machineries of Empire, #2)" rel="nofollow" href="https://www.goodreads.com/review/show/2680909103?utm_medium=api&amp;utm_source=custom_widget"><img alt="Raven Stratagem" border="0" src="https://images.gr-assets.com/books/1489615778s/34604353.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/2680909103?utm_medium=api&amp;utm_source=custom_widget">Raven Stratagem</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/3001246.Yoon_Ha_Lee">Yoon Ha Lee</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Game Feel: A Game Designer's Guide to Virtual Sensation" rel="nofollow" href="https://www.goodreads.com/review/show/2697185597?utm_medium=api&amp;utm_source=custom_widget"><img alt="Game Feel: A Game Designer's Guide to Virtual Sensation" border="0" src="https://images.gr-assets.com/books/1475202507s/3385050.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="liked it"><img alt="liked it" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/2697185597?utm_medium=api&amp;utm_source=custom_widget">Game Feel: A Game Designer's Guide to Virtual Sensation</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/1427154.Steve_Swink">Steve Swink</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Ninefox Gambit (The Machineries of Empire #1)" rel="nofollow" href="https://www.goodreads.com/review/show/2706345591?utm_medium=api&amp;utm_source=custom_widget"><img alt="Ninefox Gambit" border="0" src="https://images.gr-assets.com/books/1446557461s/26118426.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="really liked it"><img alt="really liked it" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/2706345591?utm_medium=api&amp;utm_source=custom_widget">Ninefox Gambit</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/3001246.Yoon_Ha_Lee">Yoon Ha Lee</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Clean Architecture: A Craftsman's Guide to Software Structure and Design (Robert C. Martin Series)" rel="nofollow" href="https://www.goodreads.com/review/show/2457903990?utm_medium=api&amp;utm_source=custom_widget"><img alt="Clean Architecture: A Craftsman's Guide to Software Structure and Design" border="0" src="https://images.gr-assets.com/books/1505400487s/36239393.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate"><img src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/2457903990?utm_medium=api&amp;utm_source=custom_widget">Clean Architecture: A Craftsman's Guide to Software Structure and Design</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/45372.Robert_C_Martin">Robert C. Martin</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life" rel="nofollow" href="https://www.goodreads.com/review/show/2564862554?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life" border="0" src="https://images.gr-assets.com/books/1480903131s/29965800.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate"><img src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/2564862554?utm_medium=api&amp;utm_source=custom_widget">The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/8529755.Mark_Manson">Mark Manson</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="The Heart To Start: Win the Inner War &amp; Let Your Art Shine" rel="nofollow" href="https://www.goodreads.com/review/show/2444369828?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Heart To Start: Win the Inner War &amp; Let Your Art Shine" border="0" src="https://images.gr-assets.com/books/1512580402s/36975276.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/2444369828?utm_medium=api&amp;utm_source=custom_widget">The Heart To Start: Win the Inner War &amp; Let Your Art Shine</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/4877308.David_Kadavy">David Kadavy</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Blood, Sweat, and Pixels: The Triumphant, Turbulent Stories Behind How Video Games Are Made" rel="nofollow" href="https://www.goodreads.com/review/show/2437796077?utm_medium=api&amp;utm_source=custom_widget"><img alt="Blood, Sweat, and Pixels: The Triumphant, Turbulent Stories Behind How Video Games Are Made" border="0" src="https://images.gr-assets.com/books/1487805540s/34376766.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate"><img src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/2437796077?utm_medium=api&amp;utm_source=custom_widget">Blood, Sweat, and Pixels: The Triumphant, Turbulent Stories Behind How Video Games Are Made</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/16222011.Jason_Schreier">Jason Schreier</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Arcanum Unbounded: The Cosmere Collection" rel="nofollow" href="https://www.goodreads.com/review/show/2361977162?utm_medium=api&amp;utm_source=custom_widget"><img alt="Arcanum Unbounded: The Cosmere Collection" border="0" src="https://images.gr-assets.com/books/1477491437s/30977958.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate"><img src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/2361977162?utm_medium=api&amp;utm_source=custom_widget">Arcanum Unbounded: The Cosmere Collection</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/38550.Brandon_Sanderson">Brandon Sanderson</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="The Drawing of the Three (The Dark Tower, #2)" rel="nofollow" href="https://www.goodreads.com/review/show/2288902818?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Drawing of the Three" border="0" src="https://images.gr-assets.com/books/1387765878s/19844937.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate"><img src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/2288902818?utm_medium=api&amp;utm_source=custom_widget">The Drawing of the Three</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/3389.Stephen_King">Stephen King</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="The Gunslinger (The Dark Tower, #1)" rel="nofollow" href="https://www.goodreads.com/review/show/2282775576?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Gunslinger" border="0" src="https://images.gr-assets.com/books/1389094471s/19978116.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate"><img src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/2282775576?utm_medium=api&amp;utm_source=custom_widget">The Gunslinger</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/3389.Stephen_King">Stephen King</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="The Path of Daggers (Wheel of Time, #8)" rel="nofollow" href="https://www.goodreads.com/review/show/1480136362?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Path of Daggers" border="0" src="https://images.gr-assets.com/books/1358712841s/11203987.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate"><img src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/1480136362?utm_medium=api&amp;utm_source=custom_widget">The Path of Daggers</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/6252.Robert_Jordan">Robert Jordan</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="The Shining" rel="nofollow" href="https://www.goodreads.com/review/show/2067602494?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Shining" border="0" src="https://images.gr-assets.com/books/1328334135s/11281904.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate"><img src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/2067602494?utm_medium=api&amp;utm_source=custom_widget">The Shining</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/3389.Stephen_King">Stephen King</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Level Up!: The Guide to Great Video Game Design" rel="nofollow" href="https://www.goodreads.com/review/show/2231542268?utm_medium=api&amp;utm_source=custom_widget"><img alt="Level Up!: The Guide to Great Video Game Design" border="0" src="https://images.gr-assets.com/books/1328038944s/13020815.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="really liked it"><img alt="really liked it" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/2231542268?utm_medium=api&amp;utm_source=custom_widget">Level Up!: The Guide to Great Video Game Design</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/46942.Scott_Rogers">Scott Rogers</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Rogue Potato: The Making of SanctuaryRPG" rel="nofollow" href="https://www.goodreads.com/review/show/2223848996?utm_medium=api&amp;utm_source=custom_widget"><img alt="Rogue Potato: The Making of SanctuaryRPG" border="0" src="https://images.gr-assets.com/books/1500607393s/35715029.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="liked it"><img alt="liked it" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/2223848996?utm_medium=api&amp;utm_source=custom_widget">Rogue Potato: The Making of SanctuaryRPG</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/16398972.Yixin_Li">Yixin Li</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="American Gods" rel="nofollow" href="https://www.goodreads.com/review/show/2150400801?utm_medium=api&amp;utm_source=custom_widget"><img alt="American Gods" border="0" src="https://images.gr-assets.com/books/1340932966s/12935683.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/2150400801?utm_medium=api&amp;utm_source=custom_widget">American Gods</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/1221698.Neil_Gaiman">Neil Gaiman</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Kat in die Hoenderhok" rel="nofollow" href="https://www.goodreads.com/review/show/2114963751?utm_medium=api&amp;utm_source=custom_widget"><img alt="Kat in die Hoenderhok" border="0" src="https://images.gr-assets.com/books/1504643002s/36187787.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/2114963751?utm_medium=api&amp;utm_source=custom_widget">Kat in die Hoenderhok</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/17144242.Amos_van_der_Westhuizen">Amos van der Westhuizen</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Fragile Things" rel="nofollow" href="https://www.goodreads.com/review/show/2089723251?utm_medium=api&amp;utm_source=custom_widget"><img alt="Fragile Things" border="0" src="https://images.gr-assets.com/books/1342306748s/11249894.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/2089723251?utm_medium=api&amp;utm_source=custom_widget">Fragile Things</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/1221698.Neil_Gaiman">Neil Gaiman</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="The Moon is a Harsh Mistress" rel="nofollow" href="https://www.goodreads.com/review/show/2074928482?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Moon is a Harsh Mistress" border="0" src="https://images.gr-assets.com/books/1436113031s/19862994.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/2074928482?utm_medium=api&amp;utm_source=custom_widget">The Moon is a Harsh Mistress</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/205.Robert_A_Heinlein">Robert A. Heinlein</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Einstein: His Life and Universe" rel="nofollow" href="https://www.goodreads.com/review/show/1982181619?utm_medium=api&amp;utm_source=custom_widget"><img alt="Einstein: His Life and Universe" border="0" src="https://images.gr-assets.com/books/1533833071s/19031590.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/1982181619?utm_medium=api&amp;utm_source=custom_widget">Einstein: His Life and Universe</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/7111.Walter_Isaacson">Walter Isaacson</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Our Final Invention: Artificial Intelligence and the End of the Human Era" rel="nofollow" href="https://www.goodreads.com/review/show/1931413161?utm_medium=api&amp;utm_source=custom_widget"><img alt="Our Final Invention: Artificial Intelligence and the End of the Human Era" border="0" src="https://images.gr-assets.com/books/1384847186s/18852464.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/1931413161?utm_medium=api&amp;utm_source=custom_widget">Our Final Invention: Artificial Intelligence and the End of the Human Era</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/6289858.James_Barrat">James Barrat</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Caliban's War (Expanse, #2)" rel="nofollow" href="https://www.goodreads.com/review/show/1889515419?utm_medium=api&amp;utm_source=custom_widget"><img alt="Caliban's War" border="0" src="https://images.gr-assets.com/books/1328321687s/12964289.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/1889515419?utm_medium=api&amp;utm_source=custom_widget">Caliban's War</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/4192148.James_S_A_Corey">James S.A. Corey</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Leviathan Wakes (Expanse, #1)" rel="nofollow" href="https://www.goodreads.com/review/show/1889466298?utm_medium=api&amp;utm_source=custom_widget"><img alt="Leviathan Wakes" border="0" src="https://images.gr-assets.com/books/1328342789s/11570641.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/1889466298?utm_medium=api&amp;utm_source=custom_widget">Leviathan Wakes</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/4192148.James_S_A_Corey">James S.A. Corey</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="The Butcher of Anderson Station (Expanse, #0.5)" rel="nofollow" href="https://www.goodreads.com/review/show/1889514703?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Butcher of Anderson Station" border="0" src="https://images.gr-assets.com/books/1385137878s/18886050.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="really liked it"><img alt="really liked it" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/1889514703?utm_medium=api&amp;utm_source=custom_widget">The Butcher of Anderson Station</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/4192148.James_S_A_Corey">James S.A. Corey</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Atlas Shrugged" rel="nofollow" href="https://www.goodreads.com/review/show/1867399949?utm_medium=api&amp;utm_source=custom_widget"><img alt="Atlas Shrugged" border="0" src="https://images.gr-assets.com/books/1371769905s/9469037.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/1867399949?utm_medium=api&amp;utm_source=custom_widget">Atlas Shrugged</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/432.Ayn_Rand">Ayn Rand</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Warrior King (Odyssey One, #5)" rel="nofollow" href="https://www.goodreads.com/review/show/1867399943?utm_medium=api&amp;utm_source=custom_widget"><img alt="Warrior King" border="0" src="https://images.gr-assets.com/books/1457608266s/28187442.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/1867399943?utm_medium=api&amp;utm_source=custom_widget">Warrior King</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/15153514.Evan_Currie">Evan Currie</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Out of the Black (Odyssey One, #4)" rel="nofollow" href="https://www.goodreads.com/review/show/1660889335?utm_medium=api&amp;utm_source=custom_widget"><img alt="Out of the Black" border="0" src="https://images.gr-assets.com/books/1404889304s/18906013.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/1660889335?utm_medium=api&amp;utm_source=custom_widget">Out of the Black</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/15153514.Evan_Currie">Evan Currie</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Homeworld (Odyssey One, #3)" rel="nofollow" href="https://www.goodreads.com/review/show/1656730093?utm_medium=api&amp;utm_source=custom_widget"><img alt="Homeworld" border="0" src="https://images.gr-assets.com/books/1370523301s/18043147.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/1656730093?utm_medium=api&amp;utm_source=custom_widget">Homeworld</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/15153514.Evan_Currie">Evan Currie</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="The Heart of Matter (Odyssey One, #2)" rel="nofollow" href="https://www.goodreads.com/review/show/1638856489?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Heart of Matter" border="0" src="https://images.gr-assets.com/books/1348550507s/16046065.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/1638856489?utm_medium=api&amp;utm_source=custom_widget">The Heart of Matter</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/15153514.Evan_Currie">Evan Currie</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Into the Black (Odyssey One, #1)" rel="nofollow" href="https://www.goodreads.com/review/show/1638854792?utm_medium=api&amp;utm_source=custom_widget"><img alt="Into the Black" border="0" src="https://images.gr-assets.com/books/1334235177s/12971820.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/1638854792?utm_medium=api&amp;utm_source=custom_widget">Into the Black</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/15153514.Evan_Currie">Evan Currie</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="A Memory of Light (Wheel of Time, #14; A Memory of Light, #3)" rel="nofollow" href="https://www.goodreads.com/review/show/1636651914?utm_medium=api&amp;utm_source=custom_widget"><img alt="A Memory of Light" border="0" src="https://images.gr-assets.com/books/1365609291s/17789542.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/1636651914?utm_medium=api&amp;utm_source=custom_widget">A Memory of Light</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/6252.Robert_Jordan">Robert Jordan</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Knife of Dreams (Wheel of Time, #11)" rel="nofollow" href="https://www.goodreads.com/review/show/1606362362?utm_medium=api&amp;utm_source=custom_widget"><img alt="Knife of Dreams" border="0" src="https://images.gr-assets.com/books/1328331739s/11203973.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="really liked it"><img alt="really liked it" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/1606362362?utm_medium=api&amp;utm_source=custom_widget">Knife of Dreams</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/6252.Robert_Jordan">Robert Jordan</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="A Dance with Dragons (A Song of Ice and Fire, #5)" rel="nofollow" href="https://www.goodreads.com/review/show/934637359?utm_medium=api&amp;utm_source=custom_widget"><img alt="A Dance with Dragons" border="0" src="https://images.gr-assets.com/books/1327885335s/10664113.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate"><img src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/934637359?utm_medium=api&amp;utm_source=custom_widget">A Dance with Dragons</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/346732.George_R_R_Martin">George R.R. Martin</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Warbreaker (Warbreaker, #1)" rel="nofollow" href="https://www.goodreads.com/review/show/955683460?utm_medium=api&amp;utm_source=custom_widget"><img alt="Warbreaker" border="0" src="https://images.gr-assets.com/books/1240256182s/1268479.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/955683460?utm_medium=api&amp;utm_source=custom_widget">Warbreaker</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/38550.Brandon_Sanderson">Brandon Sanderson</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Revolt in 2100" rel="nofollow" href="https://www.goodreads.com/review/show/955643147?utm_medium=api&amp;utm_source=custom_widget"><img alt="Revolt in 2100" border="0" src="https://images.gr-assets.com/books/1266721800s/1116661.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="really liked it"><img alt="really liked it" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/955643147?utm_medium=api&amp;utm_source=custom_widget">Revolt in 2100</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/205.Robert_A_Heinlein">Robert A. Heinlein</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="A Clash of Kings  (A Song of Ice and Fire, #2)" rel="nofollow" href="https://www.goodreads.com/review/show/200063918?utm_medium=api&amp;utm_source=custom_widget"><img alt="A Clash of Kings" border="0" src="https://images.gr-assets.com/books/1358254974s/10572.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="really liked it"><img alt="really liked it" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/200063918?utm_medium=api&amp;utm_source=custom_widget">A Clash of Kings</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/346732.George_R_R_Martin">George R.R. Martin</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Starship Troopers" rel="nofollow" href="https://www.goodreads.com/review/show/581718846?utm_medium=api&amp;utm_source=custom_widget"><img alt="Starship Troopers" border="0" src="https://images.gr-assets.com/books/1533117961s/17214.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/581718846?utm_medium=api&amp;utm_source=custom_widget">Starship Troopers</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/205.Robert_A_Heinlein">Robert A. Heinlein</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Ender's Game (Ender's Saga, #1)" rel="nofollow" href="https://www.goodreads.com/review/show/581680659?utm_medium=api&amp;utm_source=custom_widget"><img alt="Ender's Game" border="0" src="https://images.gr-assets.com/books/1408303130s/375802.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/581680659?utm_medium=api&amp;utm_source=custom_widget">Ender's Game</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/589.Orson_Scott_Card">Orson Scott Card</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="The Long Earth (The Long Earth, #1)" rel="nofollow" href="https://www.goodreads.com/review/show/581713904?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Long Earth" border="0" src="https://images.gr-assets.com/books/1335532694s/13147230.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="really liked it"><img alt="really liked it" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/581713904?utm_medium=api&amp;utm_source=custom_widget">The Long Earth</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/1654.Terry_Pratchett">Terry Pratchett</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Effective Java" rel="nofollow" href="https://www.goodreads.com/review/show/243219608?utm_medium=api&amp;utm_source=custom_widget"><img alt="Effective Java" border="0" src="https://images.gr-assets.com/books/1348570570s/127930.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/243219608?utm_medium=api&amp;utm_source=custom_widget">Effective Java</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/60805.Joshua_Bloch">Joshua Bloch</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Ex-Heroes (Ex-Heroes, #1)" rel="nofollow" href="https://www.goodreads.com/review/show/243222195?utm_medium=api&amp;utm_source=custom_widget"><img alt="Ex-Heroes" border="0" src="https://images.gr-assets.com/books/1328315544s/8197767.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/243222195?utm_medium=api&amp;utm_source=custom_widget">Ex-Heroes</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/3396842.Peter_Clines">Peter Clines</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="The Last Dragonslayer (The Last Dragonslayer, #1)" rel="nofollow" href="https://www.goodreads.com/review/show/237868195?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Last Dragonslayer" border="0" src="https://images.gr-assets.com/books/1289517144s/8513950.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="really liked it"><img alt="really liked it" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/237868195?utm_medium=api&amp;utm_source=custom_widget">The Last Dragonslayer</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/4432.Jasper_Fforde">Jasper Fforde</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="A Game of Thrones (A Song of Ice and Fire, #1)" rel="nofollow" href="https://www.goodreads.com/review/show/184409560?utm_medium=api&amp;utm_source=custom_widget"><img alt="A Game of Thrones" border="0" src="https://images.gr-assets.com/books/1554191954s/13496.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/184409560?utm_medium=api&amp;utm_source=custom_widget">A Game of Thrones</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/346732.George_R_R_Martin">George R.R. Martin</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Delivering the Dream: Designing and Implementing Strategy in the Public Sector" rel="nofollow" href="https://www.goodreads.com/review/show/184408849?utm_medium=api&amp;utm_source=custom_widget"><img alt="Delivering the Dream: Designing and Implementing Strategy in the Public Sector" border="0" src="https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="really liked it"><img alt="really liked it" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/184408849?utm_medium=api&amp;utm_source=custom_widget">Delivering the Dream: Designing and Implementing Strategy in the Public Sector</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/1790141.Tony_Manning">Tony Manning</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="It" rel="nofollow" href="https://www.goodreads.com/review/show/2031355911?utm_medium=api&amp;utm_source=custom_widget"><img alt="It" border="0" src="https://images.gr-assets.com/books/1431157771s/11252929.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/2031355911?utm_medium=api&amp;utm_source=custom_widget">It</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/3389.Stephen_King">Stephen King</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="A Feast for Crows (A Song of Ice and Fire, #4)" rel="nofollow" href="https://www.goodreads.com/review/show/934637093?utm_medium=api&amp;utm_source=custom_widget"><img alt="A Feast for Crows" border="0" src="https://images.gr-assets.com/books/1429538615s/13497.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="really liked it"><img alt="really liked it" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_inactive.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/934637093?utm_medium=api&amp;utm_source=custom_widget">A Feast for Crows</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/346732.George_R_R_Martin">George R.R. Martin</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="A Storm of Swords (A Song of Ice and Fire, #3)" rel="nofollow" href="https://www.goodreads.com/review/show/934636704?utm_medium=api&amp;utm_source=custom_widget"><img alt="A Storm of Swords" border="0" src="https://images.gr-assets.com/books/1497931121s/62291.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/934636704?utm_medium=api&amp;utm_source=custom_widget">A Storm of Swords</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/346732.George_R_R_Martin">George R.R. Martin</a>
+                        </div>
+                    </div>
+                    <div class="gr_custom_each_container_1555620266">
+                        <div class="gr_custom_book_container_1555620266">
+                            <a title="Abaddon's Gate (Expanse, #3)" rel="nofollow" href="https://www.goodreads.com/review/show/1931410619?utm_medium=api&amp;utm_source=custom_widget"><img alt="Abaddon's Gate" border="0" src="https://images.gr-assets.com/books/1365781139s/17793631.jpg" /></a>
+                        </div>
+                        <div class="gr_custom_rating_1555620266">
+                            <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://www.goodreads.com/images/layout/gr_red_star_active.png" /></span>
+                        </div>
+                        <div class="gr_custom_title_1555620266">
+                            <a rel="nofollow" href="https://www.goodreads.com/review/show/1931410619?utm_medium=api&amp;utm_source=custom_widget">Abaddon's Gate</a>
+                        </div>
+                        <div class="gr_custom_author_1555620266">
+                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/4192148.James_S_A_Corey">James S.A. Corey</a>
+                        </div>
+                    </div>
+                    <br style="clear: both"/>
+                    <center>
+                        <a rel="nofollow" href="https://www.goodreads.com/"><img alt="goodreads.com" style="border:0" src="https://www.goodreads.com/images/widget/widget_logo.gif" /></a>
+                    </center>
+                    <noscript>
+                        Share <a rel="nofollow" href="https://www.goodreads.com/">book reviews</a> and ratings with Matt, and even join a <a rel="nofollow" href="https://www.goodreads.com/group">book club</a> on Goodreads.
+                    </noscript>
+                </div>
+
+            </div>
+
+            <script src="https://www.goodreads.com/review/custom_widget/5788613.Finished%20reading?cover_position=left&cover_size=small&num_books=100&order=d&shelf=read&show_author=1&show_cover=1&show_rating=1&show_review=0&show_tags=1&show_title=1&sort=date_read&widget_bg_color=FFFFFF&widget_bg_transparent=&widget_border_width=1&widget_id=1555620266&widget_text_color=000000&widget_title_size=medium&widget_width=medium" type="text/javascript" charset="utf-8"></script>
+        </div>
+    </section>
+
+    <footer class="post-full-footer">
+      <section class="author-card">
+        <img class="author-profile-image" src="{{ (.Params.authorAvatar | default .Site.Params.authorAvatar) | absURL}}" alt="Author" />
+        <section class="author-card-content">
+            <h4 class="author-card-name"><a href="{{"/" | absURL}}">{{.Params.author | default .Site.Params.author}}</a></h4>
+                <p>{{.Params.authorDescription | default .Site.Params.authorDescription}}</p>
+        </section>
+      </section>
+    </footer>
+</article>

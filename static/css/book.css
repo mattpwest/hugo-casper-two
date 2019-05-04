@@ -1,0 +1,18 @@
+section.post-full-content {
+    width: 67%;
+    float: left;
+    padding: 70px 20px 0px;
+}
+
+section.widgets-sidebar {
+    width: 33%;
+    float: right;
+}
+
+footer.post-full-footer {
+    clear: both;
+}
+
+div.gr_custom_container_1555620266, div.gr_custom_container_1556998562 {
+    border-radius: 0px;
+}
